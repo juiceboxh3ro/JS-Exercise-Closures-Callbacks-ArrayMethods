@@ -211,7 +211,7 @@ function getFullNames(runners) {
   // }
   // return fullNames;
 
-  return(runners.map(a => `${a['last_name']}, ${a['first_name']}`));
+  return runners.map(a => `${a['last_name']}, ${a['first_name']}`);
 
 
 }
@@ -230,7 +230,7 @@ function getFullNames(runners) {
 */
 function firstNamesAllCaps(runners) {
 
-  return(runners.map(a => a['first_name'].toUpperCase()));
+  return runners.map(a => a['first_name'].toUpperCase());
 
   // return(runners.map(() => {
   //   for (let i=0 ; i<runners.length ; i++) {
@@ -333,7 +333,7 @@ function counterMakerWithLimit(max) {
   return function counter() {
     if(count < max) {
       count++
-    } else if ( count === max) {
+    } else if (count === max) {
       count = 0;
     }
     return count;
