@@ -204,16 +204,10 @@ function processDuplicateFree(list, callback) {
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
 function getFullNames(runners) {
-  // const fullNames = [];
+  const fullNames = [];
 
-  // for (let i=0 ; i<runners.length ; i++) {
-  //   fullNames.push(`${runners[i].last_name}, ${runners[i].first_name}`);
-  // }
-  // return fullNames;
-
-  return runners.map(a => `${a['last_name']}, ${a['first_name']}`);
-
-
+  runners.forEach(a => fullNames.push(`${a['last_name']}, ${a['first_name']}`))
+  return fullNames;
 }
 
 /**
@@ -237,15 +231,6 @@ function firstNamesAllCaps(runners) {
   //     return(runners[i].first_name.toUpperCase());
   //   }
   // }));
-
-  //*******************************************************/
-  
-  // const capNames = [];
-
-  // for (let i=0 ; i<runners.length ; i++) {
-  //   capNames.push(runners[i].first_name.toUpperCase());
-  // }
-  // return capNames;
 
 }
 
